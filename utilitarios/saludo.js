@@ -9,6 +9,7 @@ saludar = function(){
     let mensajes = "bienvenido"+nombre+" "+ apellido;
     mostarTexto("lbResultado", mensajes)
     mostarImagen("imgSaludo","./imagenes/hacer-venta.gif")
+    mostrarTextoEnCaja("txtNombre", "");
 }
 
 mostarTexto = function(idComponente, mensaje){
@@ -18,6 +19,12 @@ mostarTexto = function(idComponente, mensaje){
 mostarImagen = function (idComponente, rutaImagen){
     let componente = document.getElementById(idComponente)
     componente.src = rutaImagen;
+}
+//Modificar caja de texto
+mostrarTextoEnCaja = function(idComponente, mensaje){
+    let componente = document.getElementById(idComponente);
+    //Value limpia la caj de texto nombre
+    componente.value = mensaje;
 }
 
 
