@@ -8,11 +8,16 @@ saludar = function(){
 
     let mensajes = "bienvenido"+nombre+" "+ apellido;
     mostarTexto("lbResultado", mensajes)
+    mostarImagen("imgSaludo","./imagenes/hacer-venta.gif")
 }
+
 mostarTexto = function(idComponente, mensaje){
     let componente = document.getElementById(idComponente);
     componente.innerText = mensaje;
-
+}
+mostarImagen = function (idComponente, rutaImagen){
+    let componente = document.getElementById(idComponente)
+    componente.src = rutaImagen;
 }
 
 
