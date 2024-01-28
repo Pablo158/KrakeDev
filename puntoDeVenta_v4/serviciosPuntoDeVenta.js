@@ -20,11 +20,11 @@ calcularSubTotal = function(precio,cantidad){
     return total;
 
 }
-
-calculartotal = function(subTotal,descuento,iva){
-
-    let totalC = (subTotal-descuento);
-    let TotalIva = (iva/100)*totalC;
-    return TotalIva;
-
+calcularTotal=function(subtotal,descuento,iva){
+    //let totalC = (subTotal-descuento);
+    //let TotalIva = (iva/100)*totalC;
+    //return TotalIva;
+    let valortotal=subtotal-descuento+iva;
+    return valortotal
+        
 }

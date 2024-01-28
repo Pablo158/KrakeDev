@@ -85,6 +85,8 @@ calcularValorTotal = function () {
             mostrarTexto("lblValorIVA",valorIVA);
 
     //10. Invocar a calcularTotal y lo que devuelve guardar en la variable valorTotal
+    valorTotal=calcularTotal(valorSubtotal,valorDescuento,valorIVA);
+
     //11. Mostrar el resultado en el componente lblTotal
     /*
         Caso de prueba: 
@@ -100,20 +102,41 @@ calcularValorTotal = function () {
 
                 Si el caso de prueba es exitoso, hacer un commit
        */
-            
+                mostrarTexto("lblTotal",valorTotal);
+
     //12. Mostrar un resumen en el componente lblResumen, si no existe debe agregarlo
     /*
         Ejemplo: 
             Valor a pagar por 20 cerveza corona con 10% de descuento: USD 48.75
         Si funciona, hacer un commit
     */
+        resumen="El Valor a pagar  es"+cantidad+" "+nombreProducto+" "+"con"+" "+valorDescuento+" de descuento : USD "+valorTotal;
+        mostrarTexto("lblresumen",resumen);
 
 }
-limpiar = function () {
+borrar = function () {
     /*
         Dejar todas las cajas de texto con el valor cadena vacía, 0 ó 0.0 según el tipo de dato
         Dejar todos los textos de los montos con el valor 0.0
         Si funciona, hacer un commit
      */
+        let producto=document.getElementById("txtProducto");
+        let precio=document.getElementById("txtPrecio");
+        let cantidad=document.getElementById("txtCantidad");
+        let descuento=document.getElementById("txtPorcentajeDescuento");
+        let subTotal=document.getElementById("lblSubtotal");
+        let porcentajeDescuento=document.getElementById("lblDescuento");
+        let iva=document.getElementById("lblValorIVA");
+        let total=document.getElementById("lblTotal");
+        let resumenTotal=document.getElementById("lblresumen");
+        producto.value = "0";
+        precio.value = "0";
+        cantidad.value = "0";
+        descuento.value = "0";
+        subTotal.innerText = "0";
+        porcentajeDescuento.innerText= "0.0";
+        iva.innerText = "0.0";
+        total.innerText= "0.0";
+        resumenTotal.innerText= "0.0";
 }
 /* SI TODO FUNCIONA, HACER UN PUSH */
