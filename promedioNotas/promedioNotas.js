@@ -12,6 +12,21 @@ calcularPromedioNotas = function (){
    let promedio=calcularPromedio(nota1Recuperada1,nota2Recuperada2,nota3Recuperada3);
    //valorSubtotal=calcularSubTotal(precioProducto,cantidad);
 
-    console.log(promedio)
-   mostrarTexto("lblNumero",promedio)
-}
+
+   if( promedio <5 &&  promedio >0){
+   mostrarTexto("lblNumero",promedio+" Usted esta reprobado");
+   mostarImagen("idImg","./imagenes/reprobado.gif")
+
+    }else if(promedio >=5 && promedio <= 8){
+        mostrarTexto("lblNumero", promedio+"Buen trabajo")
+        mostarImagen("idImg","./imagenes/buentrabajo.gif")
+    }else if (promedio > 8 && promedio <=10){
+        mostrarTexto("lblNumero",promedio+"Excelente")
+        mostarImagen("idImg","./imagenes/excelente.gif")
+    }else{
+        mostrarTexto("lblNumero","Dados incorrectos")
+        mostarImagen("idImg","./imagenes/error.gif")
+
+    }
+    //console.log(promedio)
+}   

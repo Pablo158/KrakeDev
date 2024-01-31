@@ -5,6 +5,10 @@ recuperarTexto=function(idComponente){
    valorIngresado=componente.value;
    return valorIngresado;
 }
+mostarImagen = function (idComponente, rutaImagen){
+   let componente = document.getElementById(idComponente)
+   componente.src = rutaImagen;
+}
 
 recuperarFloat = function(idComponente){
     let valorCaja= recuperarTexto(idComponente);
