@@ -82,20 +82,21 @@ validarClave = function(){
 }
 }
 esMinuscula = function(){
-    let letra ="a"
-    if(letra >= "a" && letra<="z"){
+    let letra 
+    if(letra >= "97" && letra<="122"){
         console.log("EL caracter es minuscula")
     }
 }
 esMayuscula=function(){
-    let letra ="a"
-    if(letra >= "A" && letra<="Z"){
+    let letra
+    if(letra >= "65" && letra<="90"){
         console.log("EL caracter es Mayuscula")
     }
+
 }
 esDigito = function(){
     let digito;
-    if(letra >= "0" && letra<="9"){
+    if(letra >= "48" && letra<="57"){
         console.log("EL caracter es un digito")
     }
 }
