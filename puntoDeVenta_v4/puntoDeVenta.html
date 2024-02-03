@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="utilitarios.js"></script>
         <script src="serviciosPuntoDeVenta.js"></script>
+        <script src="utilitarios.js"></script>
         <script src="puntoDeVenta.js"></script>
-
-        <script src="../utilitarios/saludo.js"></script>
-        <script src="../utilitarios/utilitarios.js"></script>
-
-
     </head>
     <body>
         <h3>Ingrese el nombre del producto</h3>
@@ -29,14 +24,7 @@
         <h3 id="lblTotal">0.0</h3>
 
         <input type="button" value="CALCULAR TOTAL" 
-        onclick="calcularValorTotal()"/>
-
-        <input type="button" value="BORRAR" 
-        onclick="borrar()"/>
-
+        onclick="calcularValorTotal()"/> <input type="button" value="LIMPIAR" onclick="limpiar();"/>
         <h4 id="lblresumen"></h4>
-
-    
     </body> 
 </html>
-

@@ -1,4 +1,3 @@
-
 mostrarImagen=function(idComponente,rutaImagen){
     let componente;
     componente=document.getElementById(idComponente);
@@ -34,5 +33,3 @@ recuperarFloat = function(idComponente){
     let valorFlotante = parseFloat(valorCaja);
     return valorFlotante;
  }
-
-
