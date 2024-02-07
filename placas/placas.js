@@ -20,15 +20,14 @@ validarPlaca=function(){
         let tipo=obtenerTipoVehiculo(placa);
 
         if(tipo !== null){
-            cambiarTexto("lblVehiculo", "Tipo de Vehiculo: " + tipo);
+            cambiarTexto("lblVehiculo", "Tipo de Vehiculo: ");
         }else{
             cambiarTexto("lblVehiculo", "Vehiculo Incorrecto");
         }
-
         let dia=obtenerDiaPicoYPlaca(placa,placa.length===8);
 
         if(dia!==null){
-            cambiarTexto("lblDia", "No circula: " + dia);
+            cambiarTexto("lblDia", "No circula: ");
         }else{
             cambiarTexto("lblDia","Ultimo digito incorrecto");
         }

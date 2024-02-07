@@ -1,6 +1,6 @@
 validarEstructura = function (placa) {
 
-    if(placa.length || 8 && placa.length == 7){
+    if(placa.length == 8 || placa.length == 7){
         if(esMayuscula(placa)){
             if(esGuion (placa)){
                 if(esGuion (placa, placa.length == 8)){
@@ -125,5 +125,33 @@ obtenerDiaPicoYPlaca=function(placa,tieneOcho){
   
 
     return noCircula;
+}
+
+obtenerTipoVehiculo=function(placa){
+    let segundaLetra=placa.charCodeAt(1);
+    let tipo = null;
+
+    if(segundaLetra===65 || segundaLetra===90 ){
+     tipo='Vehiculo Comercial';
+    }else if(segundaLetra===69){
+        tipo='Vehiculo Gubernamental';
+
+    }else if(segundaLetra===88){
+        tipo='Vehiculo de uso Oficial';
+
+    }else if(segundaLetra===83){
+        tipo='Vehiculo del Gobierno Provincial';
+
+    }else if(segundaLetra===77){
+        tipo='Vehiculo Municipal';
+        
+    }else if(segundaLetra===66,67,68,70,71,72,73,74,75,76,78,79,80,81,82,84,85,86,87,89){
+        tipo='Vehiculo Particular';
+      
+    }else{
+        tipo=null;
+    }
+    return tipo;
+
 }
        
