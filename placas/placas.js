@@ -53,3 +53,12 @@ validarPlaca=function(){
         
     }
 }
+
+limpiar=function(){
+    cambiarTexto("lblValidar","");
+    cambiarTexto("lblProvincia", "");
+    cambiarTexto("lblVehiculo", "");
+    cambiarTexto("lblDia", "");
+    cambiarTexto("lblErrores","");
+    document.getElementById("txtPlaca").value = "";
+}
